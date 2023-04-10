@@ -7,7 +7,7 @@ import logging
 from redistimeseries.client import Client as RedisTimeSeries
 from tsconversion import aspect_ratio
 from urllib.parse import urlparse
-from tracklet.trackletmanager import TrackletManager
+from trackletmanager import TrackletManager
 
 
 

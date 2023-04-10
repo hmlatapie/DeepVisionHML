@@ -1,4 +1,4 @@
-from tracklet.tracklet import Tracklet
+from tracklet import Tracklet
 
 class TrackletManager:
     
@@ -6,17 +6,18 @@ class TrackletManager:
     STATUS_INACTIVE = "inactive"
 
 
-    def __init__(self, max_skipped_frame_allowed: int):
+    def __init__(self, max_skipped_frame_allowed: int, tracklet_length = 20):
         """ object_tracker (dict) : tracket class objects
             max_skipped_frame_allowed (integer): max number of frames skipped
             ts_status_labels (dict) : object's label status 
+            default_tracklet_length value: 20 and be replaced by value which is passed)
         """
         
         self.object_tracker = {}
         self.max_skipped_frame_allowed = max_skipped_frame_allowed
         self.ts_status_labels = {}
         self.counter = 0
-        self.tracklet_length = 20
+        self.tracklet_length = tracklet_length
         self.tracklets = []
 
 
